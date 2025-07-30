@@ -1,7 +1,7 @@
 <div style="display:flex; width:100%; justify-content:space-between; align-items:center;">
     @php
         $actions = [
-            $this->testDropdownAction,
+            $action->getModalAction('testDropdown'),
         ];
     @endphp
     <div>Label</div>

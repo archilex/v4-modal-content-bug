@@ -1,3 +1,3 @@
 <div>
-    {{ $this->testAction }}
+    {{ $action->getModalAction('test') }}
 </div>

@@ -20,14 +20,20 @@ class ListUsers extends ListRecords
                 ->registerModalActions([
                     $this->testAction()
                 ])
-                ->modalContent(view('modal-content-test')),
+                ->modalContent(fn ($action) => view(
+                    'modal-content-test',
+                    ['action' => $action],
+                )),
             Action::make('dropdownModalContentTest')
                 ->modalDescription('Same as issues as other action, but also the dropdown is not anchored to the button.')
                 ->slideOver()
                 ->registerModalActions([
                     $this->testDropdownAction()
                 ])
-                ->modalContent(view('dropdown-modal-content-test'))
+                ->modalContent(fn ($action) => view(
+                    'dropdown-modal-content-test',
+                    ['action' => $action],
+                )),
         ];
     }
 
